@@ -1,0 +1,6 @@
+# Raw/source photo stash — not referenced by the site (site uses assets/img)
+Pictures/
+
+# OS junk
+.DS_Store
+Thumbs.db

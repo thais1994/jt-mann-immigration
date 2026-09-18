@@ -184,8 +184,8 @@
     });
   }
 
-  // ---- WhatsApp links — [PLACEHOLDER] replace with confirmed number, e.g. https://wa.me/1XXXXXXXXXX ----
-  var WHATSAPP_URL = 'https://wa.me/PLACEHOLDER_NUMBER';
+  // ---- WhatsApp links ----
+  var WHATSAPP_URL = 'https://wa.me/15089044002';
   ['whatsapp-btn-header', 'whatsapp-btn-hero', 'whatsapp-btn-mobile'].forEach(function (id) {
     var el = document.getElementById(id);
     if (el) el.setAttribute('href', WHATSAPP_URL);

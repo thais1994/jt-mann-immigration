@@ -3,7 +3,7 @@
 const TRANSLATIONS = {
   pt: {
     meta_title: "Advogado de Imigração Federal | Law Office of Jonathan T. Mann",
-    meta_description: "Law Office of Jonathan T. Mann ajuda famílias imigrantes em todos os Estados Unidos com vistos, green card e cidadania americana — consultas virtuais em inglês, espanhol e português, com foco na comunidade brasileira da Flórida.",
+    meta_description: "Law Office of Jonathan T. Mann ajuda famílias imigrantes em todos os Estados Unidos com vistos, green card e cidadania americana — consultas virtuais em inglês, espanhol e português, com foco na comunidade brasileira.",
 
     nav_home: "Início",
     nav_services: "Serviços",
@@ -105,8 +105,6 @@ const TRANSLATIONS = {
     faq_1_a: "O primeiro passo é agendar uma consulta. Durante essa conversa, avaliamos sua situação e explicamos quais opções de imigração podem se aplicar ao seu caso.",
     faq_3_q: "As consultas são feitas em português ou espanhol?",
     faq_3_a: "Sim. Nossa equipe atende clientes em inglês, espanhol e português, garantindo que você entenda claramente cada etapa do processo.",
-    faq_4_q: "Vocês atendem apenas clientes na Flórida?",
-    faq_4_a: "Não. Como o direito de imigração é federal, podemos atender clientes em todos os Estados Unidos, não apenas na Flórida. As consultas são realizadas virtualmente, por telefone ou vídeo, onde quer que você esteja.",
     faq_5_q: "Quanto tempo leva um processo de imigração?",
     faq_5_a: "O prazo varia bastante dependendo do tipo de caso, do órgão responsável e de circunstâncias individuais. Discutimos expectativas realistas de prazo durante sua consulta.",
     faq_6_q: "Quais documentos devo preparar para a consulta?",
@@ -146,7 +144,7 @@ const TRANSLATIONS = {
 
   en: {
     meta_title: "Federal Immigration Attorney | Law Office of Jonathan T. Mann",
-    meta_description: "The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on Florida's Brazilian community.",
+    meta_description: "The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on the Brazilian community.",
 
     nav_home: "Home",
     nav_services: "Services",
@@ -248,8 +246,6 @@ const TRANSLATIONS = {
     faq_1_a: "The first step is scheduling a consultation. During that conversation, we evaluate your situation and explain which immigration options may apply to your case.",
     faq_3_q: "Are consultations available in Spanish or Portuguese?",
     faq_3_a: "Yes. Our team serves clients in English, Spanish, and Portuguese, so you clearly understand every step of the process.",
-    faq_4_q: "Do you only work with clients in Florida?",
-    faq_4_a: "No. Because immigration law is federal, we're able to assist clients throughout the United States, not only in Florida. Consultations are conducted virtually by phone or video, wherever you're located.",
     faq_5_q: "How long does an immigration case take?",
     faq_5_a: "Timelines vary significantly depending on the type of case, the responsible government agency, and individual circumstances. We discuss realistic timeline expectations during your consultation.",
     faq_6_q: "What documents should I prepare for the consultation?",
@@ -289,7 +285,7 @@ const TRANSLATIONS = {
 
   es: {
     meta_title: "Abogado de Inmigración Federal | Law Office of Jonathan T. Mann",
-    meta_description: "Law Office of Jonathan T. Mann ayuda a familias inmigrantes en todo Estados Unidos con visas, green card y ciudadanía estadounidense — consultas virtuales en inglés, español y portugués, con un enfoque en la comunidad brasileña de la Florida.",
+    meta_description: "Law Office of Jonathan T. Mann ayuda a familias inmigrantes en todo Estados Unidos con visas, green card y ciudadanía estadounidense — consultas virtuales en inglés, español y portugués, con un enfoque en la comunidad brasileña.",
 
     nav_home: "Inicio",
     nav_services: "Servicios",
@@ -391,8 +387,6 @@ const TRANSLATIONS = {
     faq_1_a: "El primer paso es agendar una consulta. Durante esa conversación, evaluamos su situación y le explicamos qué opciones migratorias pueden aplicar a su caso.",
     faq_3_q: "¿Las consultas están disponibles en español o portugués?",
     faq_3_a: "Sí. Nuestro equipo atiende a clientes en inglés, español y portugués, para que usted comprenda claramente cada etapa del proceso.",
-    faq_4_q: "¿Solo atienden a clientes en la Florida?",
-    faq_4_a: "No. Como el derecho de inmigración es federal, podemos atender a clientes en todo Estados Unidos, no solo en la Florida. Las consultas se realizan virtualmente, por teléfono o video, donde sea que usted se encuentre.",
     faq_5_q: "¿Cuánto tiempo toma un proceso de inmigración?",
     faq_5_a: "Los plazos varían considerablemente según el tipo de caso, la agencia gubernamental responsable y las circunstancias individuales. Conversamos sobre expectativas realistas de tiempo durante su consulta.",
     faq_6_q: "¿Qué documentos debo preparar para la consulta?",

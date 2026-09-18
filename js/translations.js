@@ -68,25 +68,25 @@ const TRANSLATIONS = {
     about_license_text: "Jonathan T. Mann é licenciado para exercer advocacia em Massachusetts, Nova York e Maine. Ele não é licenciado na Flórida.",
     about_license_scope: "A prática deste escritório é limitada exclusivamente ao direito federal de imigração e nacionalidade dos Estados Unidos. O direito de imigração federal pode ser exercido a partir de qualquer localidade por qualquer advogado licenciado em qualquer estado dos EUA. <em>Vide</em> 8 C.F.R. &sect; 1001.1(f); <em>Sperry v. Florida</em>, 373 U.S. 379 (1963). O escritório não presta consultoria sobre o direito da Flórida, não representa clientes em tribunais estaduais da Flórida ou perante órgãos estaduais da Flórida, e não oferece serviços em nenhuma área do direito estadual em qualquer jurisdição na qual seu advogado não seja licenciado.",
 
-    partners_eyebrow: "Consultores Jurídicos Brasileiros",
-    partners_title: "Apoio dedicado aos nossos clientes brasileiros",
-    partners_intro: "Embora atendamos clientes de todas as nacionalidades, mantemos uma equipe de consultores no Brasil para apoiar especificamente nossos clientes brasileiros em questões transfronteiriças.",
+    partners_eyebrow: "Nossos Consultores Jurídicos",
+    partners_title: "Apoio dedicado a cada processo de imigração",
+    partners_intro: "Nossos consultores apoiam o Jonathan em casos de imigração para clientes de todas as origens, trazendo comunicação em múltiplos idiomas e experiência jurídica transfronteiriça — com profundidade adicional na comunidade brasileira.",
 
     consultant1_badge: "Consultor Sênior",
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Jurídico Brasileiro",
     consultant1_location: "Orlando, Flórida",
-    consultant1_bio: "Leopoldo é advogado licenciado pela Ordem dos Advogados do Brasil (OAB/RJ) e sócio fundador de seu próprio escritório no Rio de Janeiro, com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório. É doutor e mestre em Ciências Jurídicas pela Universidade Autónoma de Lisboa, com especialização em U.S. Federal Taxation and International Transactions pela University of Illinois Urbana-Champaign. Como consultor jurídico brasileiro do Law Office of Jonathan T. Mann, ele apoia clientes brasileiros em questões tributárias e transfronteiriças relacionadas ao seu processo de imigração para os Estados Unidos.",
+    consultant1_bio: "Leopoldo é advogado licenciado pela Ordem dos Advogados do Brasil (OAB/RJ) e sócio fundador de seu próprio escritório no Rio de Janeiro, com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório. É doutor e mestre em Ciências Jurídicas pela Universidade Autónoma de Lisboa, com especialização em U.S. Federal Taxation and International Transactions pela University of Illinois Urbana-Champaign. Como consultor jurídico brasileiro do Law Office of Jonathan T. Mann, ele apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias e transfronteiriças que afetam clientes brasileiros.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Jurídica Brasileira",
-    consultant2_bio: "Sylvia é advogada licenciada pela Ordem dos Advogados do Brasil (OAB/RJ), com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório, e experiência em escritórios de advocacia e na Procuradoria Regional da República no Rio de Janeiro. Como consultora jurídica brasileira do Law Office of Jonathan T. Mann, apoia clientes brasileiros em questões tributárias e transfronteiriças relacionadas ao seu processo de imigração para os Estados Unidos.",
+    consultant2_bio: "Sylvia é advogada licenciada pela Ordem dos Advogados do Brasil (OAB/RJ), com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório, e experiência em escritórios de advocacia e na Procuradoria Regional da República no Rio de Janeiro. Como consultora jurídica brasileira do Law Office of Jonathan T. Mann, apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias e transfronteiriças que afetam clientes brasileiros.",
 
     consultant3_name: "Thaís Rodrigues",
-    consultant3_title: "Advogada Brasileira",
-    consultant3_bio: "Thaís Rodrigues é advogada licenciada no Brasil e apoia a prática de imigração do escritório, ajudando clientes brasileiros e latino-americanos com suas questões de imigração para os Estados Unidos. Trabalhando ao lado do Jonathan, ela auxilia em pesquisa jurídica, preparação de casos e revisão de documentos em processos de imigração baseados em família e emprego, garantindo que os clientes possam se comunicar com conforto em português, inglês ou espanhol.",
+    consultant3_title: "Consultora Jurídica Brasileira",
+    consultant3_bio: "Thaís Rodrigues é advogada licenciada no Brasil e apoia a prática de imigração do escritório, ajudando clientes de todas as origens com suas questões de imigração para os Estados Unidos, com profundidade adicional em casos brasileiros e latino-americanos. Trabalhando ao lado do Jonathan, ela auxilia em pesquisa jurídica, preparação de casos e revisão de documentos em processos de imigração baseados em família e emprego, garantindo que os clientes possam se comunicar com conforto em português, inglês ou espanhol.",
 
-    consultant_disclaimer: "Leopoldo, Sylvia e Thaís não são advogados licenciados nos Estados Unidos e não exercem advocacia americana. Eles atuam como consultores jurídicos brasileiros, apoiando a comunicação e o entendimento de questões relacionadas ao Brasil.",
+    consultant_disclaimer: "Leopoldo, Sylvia e Thaís são advogados licenciados no Brasil — não nos Estados Unidos — e não exercem advocacia americana. Neste escritório, eles atuam como consultores jurídicos em casos de imigração para clientes de todas as origens.",
 
     why_eyebrow: "Por Que Escolher o Law Office of Jonathan T. Mann",
     why_title: "Um atendimento pensado para você",
@@ -113,7 +113,6 @@ const TRANSLATIONS = {
     faq_7_a: "Atendemos regularmente as áreas listadas neste site. Para alguns tipos de caso mais especializados, avaliamos sua situação e, quando apropriado, indicamos um advogado de confiança mais adequado para ajudar — para que você nunca fique sem direção.",
 
     contact_eyebrow: "Contato",
-    contact_title: "Agende sua consulta",
     contact_subtitle: "Consultas virtuais — atendendo clientes em todos os Estados Unidos.",
     contact_form_name: "Nome completo",
     contact_form_email: "E-mail",
@@ -209,25 +208,25 @@ const TRANSLATIONS = {
     about_license_text: "Jonathan T. Mann is admitted to the practice of law in Massachusetts, New York, and Maine. He is not admitted in Florida.",
     about_license_scope: "This firm's practice is limited exclusively to United States federal immigration and nationality law. Federal immigration law may be practiced from any location by any attorney admitted in any U.S. state. <em>See</em> 8 C.F.R. &sect; 1001.1(f); <em>Sperry v. Florida</em>, 373 U.S. 379 (1963). The firm does not advise on Florida law, does not represent clients in Florida state courts or before Florida state agencies, and does not offer services in any area of state law in any jurisdiction where its attorney is not admitted.",
 
-    partners_eyebrow: "Brazilian Legal Consultants",
-    partners_title: "Dedicated support for our Brazilian clients",
-    partners_intro: "While we serve clients of every nationality, we maintain a team of Brazil-based consultants to specifically support our Brazilian clients with cross-border matters.",
+    partners_eyebrow: "Our Legal Consultants",
+    partners_title: "Dedicated support across every immigration case",
+    partners_intro: "Our consultants support Jonathan on immigration cases for clients of every background, bringing multilingual communication and cross-border legal experience — with added depth in the Brazilian community.",
 
     consultant1_badge: "Senior Consultant",
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Brazilian Legal Consultant",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo is a Brazilian-licensed attorney (OAB/RJ) and founding partner of his own law firm in Rio de Janeiro, practicing Tax Law, International Tax Law, and Immigration Law. He holds a Doctorate and Master's in Legal Sciences from Universidade Autónoma de Lisboa, with a certificate in U.S. Federal Taxation and International Transactions from the University of Illinois Urbana-Champaign. As the Brazilian legal consultant to the Law Office of Jonathan T. Mann, he supports Brazilian clients with tax and cross-border matters related to their U.S. immigration process.",
+    consultant1_bio: "Leopoldo is a Brazilian-licensed attorney (OAB/RJ) and founding partner of his own law firm in Rio de Janeiro, practicing Tax Law, International Tax Law, and Immigration Law. He holds a Doctorate and Master's in Legal Sciences from Universidade Autónoma de Lisboa, with a certificate in U.S. Federal Taxation and International Transactions from the University of Illinois Urbana-Champaign. As the Brazilian legal consultant to the Law Office of Jonathan T. Mann, he supports immigration cases for clients of every background, with added depth in tax and cross-border matters affecting Brazilian clients.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Brazilian Legal Consultant",
-    consultant2_bio: "Sylvia is a Brazilian-licensed attorney (OAB/RJ) practicing Tax Law, International Tax Law, and Immigration Law, with experience at law firms and the Federal Prosecutor's Office in Rio de Janeiro. As a Brazilian legal consultant to the Law Office of Jonathan T. Mann, she supports Brazilian clients with tax and cross-border matters related to their U.S. immigration process.",
+    consultant2_bio: "Sylvia is a Brazilian-licensed attorney (OAB/RJ) practicing Tax Law, International Tax Law, and Immigration Law, with experience at law firms and the Federal Prosecutor's Office in Rio de Janeiro. As a Brazilian legal consultant to the Law Office of Jonathan T. Mann, she supports immigration cases for clients of every background, with added depth in tax and cross-border matters affecting Brazilian clients.",
 
     consultant3_name: "Thaís Rodrigues",
-    consultant3_title: "Brazilian Attorney",
-    consultant3_bio: "Thaís Rodrigues is a Brazilian-licensed attorney who supports the firm's immigration practice, helping Brazilian and Latin American clients navigate their U.S. immigration matters. Working alongside Jonathan, she assists with legal research, case preparation, and document review across family-based and employment-based immigration matters, ensuring clients can communicate comfortably in Portuguese, English, or Spanish.",
+    consultant3_title: "Brazilian Legal Consultant",
+    consultant3_bio: "Thaís Rodrigues is a Brazilian-licensed attorney who supports the firm's immigration practice, helping clients of every background with their U.S. immigration matters, with added depth in Brazilian and Latin American cases. Working alongside Jonathan, she assists with legal research, case preparation, and document review across family-based and employment-based immigration matters, ensuring clients can communicate comfortably in Portuguese, English, or Spanish.",
 
-    consultant_disclaimer: "Leopoldo, Sylvia, and Thaís are not attorneys licensed in the United States and do not practice U.S. law. They serve as Brazilian legal consultants, supporting communication and understanding of matters related to Brazil.",
+    consultant_disclaimer: "Leopoldo, Sylvia, and Thaís are licensed attorneys in Brazil — not in the United States — and do not practice U.S. law. At this firm, they work as legal consultants across immigration matters for clients of every background.",
 
     why_eyebrow: "Why Work With Us",
     why_title: "Service built around you",
@@ -254,7 +253,6 @@ const TRANSLATIONS = {
     faq_7_a: "We regularly handle the areas listed on this site. For certain more specialized case types, we review your situation and, when appropriate, connect you with a trusted attorney best suited to help — so you're never left without direction.",
 
     contact_eyebrow: "Contact",
-    contact_title: "Schedule your consultation",
     contact_subtitle: "Virtual consultations — serving clients throughout the United States.",
     contact_form_name: "Full name",
     contact_form_email: "Email",
@@ -350,25 +348,25 @@ const TRANSLATIONS = {
     about_license_text: "Jonathan T. Mann tiene licencia para ejercer la abogacía en Massachusetts, Nueva York y Maine. No tiene licencia en la Florida.",
     about_license_scope: "La práctica de este despacho se limita exclusivamente al derecho federal de inmigración y nacionalidad de los Estados Unidos. El derecho de inmigración federal puede ejercerse desde cualquier ubicación por cualquier abogado con licencia en cualquier estado de los EE. UU. <em>Véase</em> 8 C.F.R. &sect; 1001.1(f); <em>Sperry v. Florida</em>, 373 U.S. 379 (1963). El despacho no asesora sobre derecho de la Florida, no representa a clientes ante tribunales estatales de la Florida ni ante agencias estatales de la Florida, y no ofrece servicios en ninguna área del derecho estatal en ninguna jurisdicción en la que su abogado no tenga licencia.",
 
-    partners_eyebrow: "Consultores Legales Brasileños",
-    partners_title: "Apoyo dedicado a nuestros clientes brasileños",
-    partners_intro: "Aunque atendemos a clientes de todas las nacionalidades, contamos con un equipo de consultores en Brasil para apoyar específicamente a nuestros clientes brasileños en asuntos transfronterizos.",
+    partners_eyebrow: "Nuestros Consultores Legales",
+    partners_title: "Apoyo dedicado a cada proceso migratorio",
+    partners_intro: "Nuestros consultores apoyan a Jonathan en casos de inmigración para clientes de todos los orígenes, aportando comunicación en varios idiomas y experiencia legal transfronteriza — con especial profundidad en la comunidad brasileña.",
 
     consultant1_badge: "Consultor Sénior",
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Legal Brasileño",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo es abogado con licencia en Brasil (OAB/RJ) y socio fundador de su propio despacho en Río de Janeiro, con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio. Tiene Doctorado y Maestría en Ciencias Jurídicas por la Universidade Autónoma de Lisboa, con una certificación en U.S. Federal Taxation and International Transactions por la University of Illinois Urbana-Champaign. Como consultor legal brasileño del Law Office of Jonathan T. Mann, apoya a clientes brasileños en asuntos tributarios y transfronterizos relacionados con su proceso migratorio hacia Estados Unidos.",
+    consultant1_bio: "Leopoldo es abogado con licencia en Brasil (OAB/RJ) y socio fundador de su propio despacho en Río de Janeiro, con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio. Tiene Doctorado y Maestría en Ciencias Jurídicas por la Universidade Autónoma de Lisboa, con una certificación en U.S. Federal Taxation and International Transactions por la University of Illinois Urbana-Champaign. Como consultor legal brasileño del Law Office of Jonathan T. Mann, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios y transfronterizos que afectan a clientes brasileños.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Legal Brasileña",
-    consultant2_bio: "Sylvia es abogada con licencia en Brasil (OAB/RJ), con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio, con experiencia en despachos de abogados y en la Procuraduría Regional de la República en Río de Janeiro. Como consultora legal brasileña del Law Office of Jonathan T. Mann, apoya a clientes brasileños en asuntos tributarios y transfronterizos relacionados con su proceso migratorio hacia Estados Unidos.",
+    consultant2_bio: "Sylvia es abogada con licencia en Brasil (OAB/RJ), con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio, con experiencia en despachos de abogados y en la Procuraduría Regional de la República en Río de Janeiro. Como consultora legal brasileña del Law Office of Jonathan T. Mann, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios y transfronterizos que afectan a clientes brasileños.",
 
     consultant3_name: "Thaís Rodrigues",
-    consultant3_title: "Abogada Brasileña",
-    consultant3_bio: "Thaís Rodrigues es abogada con licencia en Brasil y apoya la práctica de inmigración del despacho, ayudando a clientes brasileños y latinoamericanos con sus asuntos migratorios hacia los Estados Unidos. Trabajando junto a Jonathan, colabora en investigación legal, preparación de casos y revisión de documentos en procesos migratorios basados en familia y empleo, garantizando que los clientes puedan comunicarse cómodamente en portugués, inglés o español.",
+    consultant3_title: "Consultora Legal Brasileña",
+    consultant3_bio: "Thaís Rodrigues es abogada con licencia en Brasil y apoya la práctica de inmigración del despacho, ayudando a clientes de todos los orígenes con sus asuntos migratorios hacia los Estados Unidos, con especial profundidad en casos brasileños y latinoamericanos. Trabajando junto a Jonathan, colabora en investigación legal, preparación de casos y revisión de documentos en procesos migratorios basados en familia y empleo, garantizando que los clientes puedan comunicarse cómodamente en portugués, inglés o español.",
 
-    consultant_disclaimer: "Leopoldo, Sylvia y Thaís no son abogados con licencia en los Estados Unidos y no ejercen la abogacía estadounidense. Actúan como consultores legales brasileños, apoyando la comunicación y el entendimiento de asuntos relacionados con Brasil.",
+    consultant_disclaimer: "Leopoldo, Sylvia y Thaís son abogados con licencia en Brasil — no en los Estados Unidos — y no ejercen la abogacía estadounidense. En este despacho, actúan como consultores legales en casos de inmigración para clientes de todos los orígenes.",
 
     why_eyebrow: "Por Qué Elegir a Law Office of Jonathan T. Mann",
     why_title: "Un servicio pensado para usted",
@@ -395,7 +393,6 @@ const TRANSLATIONS = {
     faq_7_a: "Atendemos regularmente las áreas indicadas en este sitio. Para ciertos casos más especializados, evaluamos su situación y, cuando es apropiado, lo conectamos con un abogado de confianza mejor preparado para ayudar — para que usted nunca se quede sin dirección.",
 
     contact_eyebrow: "Contacto",
-    contact_title: "Agende su consulta",
     contact_subtitle: "Consultas virtuales — atendiendo a clientes en todo Estados Unidos.",
     contact_form_name: "Nombre completo",
     contact_form_email: "Correo electrónico",

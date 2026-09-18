@@ -11,7 +11,7 @@
       var saved = localStorage.getItem(STORAGE_KEY);
       if (VALID_LANGS.indexOf(saved) !== -1) return saved;
     } catch (e) {}
-    return 'pt';
+    return 'en';
   })();
 
   function applyLanguage(lang) {

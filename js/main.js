@@ -5,6 +5,21 @@
   var VALID_LANGS = ['pt', 'en', 'es'];
   var LANG_HTML_ATTR = { pt: 'pt-BR', en: 'en', es: 'es' };
   var LANG_SHORT_LABEL = { pt: 'PT', en: 'EN', es: 'ES' };
+  // WhatsApp number to route to per language (digits only, country code included, no + / spaces / dashes)
+  var WHATSAPP_NUMBERS = {
+    en: '15089044002',   // +1 (508) 904-4002
+    pt: '16892801006',   // +1 (689) 280-1006
+    es: '5562981359159', // +55 62 98135-9159
+  };
+
+  function updateWhatsAppLinks(lang) {
+    var number = WHATSAPP_NUMBERS[lang] || WHATSAPP_NUMBERS.en;
+    var url = 'https://wa.me/' + number;
+    ['whatsapp-btn-header', 'whatsapp-btn-hero', 'whatsapp-btn-mobile'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.setAttribute('href', url);
+    });
+  }
   var htmlEl = document.documentElement;
   var currentLang = (function () {
     try {
@@ -32,6 +47,8 @@
     document.title = dict.meta_title;
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', dict.meta_description);
+
+    updateWhatsAppLinks(lang);
 
     ['lang-dropdown-current', 'lang-dropdown-current-mobile'].forEach(function (id) {
       var el = document.getElementById(id);
@@ -167,9 +184,10 @@
     });
   });
 
-  // ---- Contact form (placeholder submit handler — wire to real endpoint before launch) ----
+  // ---- Contact form (submits to Formspree via fetch, keeps the user on-page) ----
   var form = document.getElementById('contact-form');
   var successMsg = document.getElementById('form-success');
+  var errorMsg = document.getElementById('form-error');
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -177,19 +195,34 @@
         form.reportValidity();
         return;
       }
-      // [PLACEHOLDER] No backend wired yet — confirm destination email/service before launch.
-      successMsg.hidden = false;
-      form.reset();
-      successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      if (errorMsg) errorMsg.hidden = true;
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      })
+        .then(function (response) {
+          if (response.ok) {
+            successMsg.hidden = false;
+            form.reset();
+            successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            if (errorMsg) errorMsg.hidden = false;
+          }
+        })
+        .catch(function () {
+          if (errorMsg) errorMsg.hidden = false;
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
-  // ---- WhatsApp links ----
-  var WHATSAPP_URL = 'https://wa.me/15089044002';
-  ['whatsapp-btn-header', 'whatsapp-btn-hero', 'whatsapp-btn-mobile'].forEach(function (id) {
-    var el = document.getElementById(id);
-    if (el) el.setAttribute('href', WHATSAPP_URL);
-  });
+  // ---- WhatsApp links — routed to a different number per language, see updateWhatsAppLinks() ----
 
   // ---- Footer year ----
   var yearEl = document.getElementById('footer-year');

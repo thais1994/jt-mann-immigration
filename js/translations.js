@@ -2,7 +2,7 @@
 // Edit copy here; index.html references keys via data-i18n attributes.
 const TRANSLATIONS = {
   pt: {
-    meta_title: "Advogado de Imigração Federal | Law Office of Jonathan T. Mann",
+    meta_title: "Mann Immigration Law | Law Office of Jonathan T. Mann",
     meta_description: "Law Office of Jonathan T. Mann ajuda famílias imigrantes em todos os Estados Unidos com vistos, green card e cidadania americana — consultas virtuais em inglês, espanhol e português, com foco na comunidade brasileira.",
 
     nav_home: "Início",
@@ -76,7 +76,7 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Jurídico Brasileiro",
     consultant1_location: "Orlando, Flórida",
-    consultant1_bio: "Leopoldo é advogado licenciado pela Ordem dos Advogados do Brasil (OAB/RJ) e sócio fundador de seu próprio escritório no Rio de Janeiro, com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório. É doutor e mestre em Ciências Jurídicas pela Universidade Autónoma de Lisboa, com especialização em U.S. Federal Taxation and International Transactions pela University of Illinois Urbana-Champaign. Como consultor jurídico brasileiro do Law Office of Jonathan T. Mann, ele apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias e transfronteiriças que afetam clientes brasileiros.",
+    consultant1_bio: "Leopoldo é advogado licenciado pela Ordem dos Advogados do Brasil (OAB/RJ) e sócio fundador de seu próprio escritório no Rio de Janeiro, com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório, com doutorado em Ciências Jurídicas pela Universidade Autónoma de Lisboa. Como consultor jurídico brasileiro do Law Office of Jonathan T. Mann, ele apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias transfronteiriças.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Jurídica Brasileira",
@@ -119,7 +119,7 @@ const TRANSLATIONS = {
     contact_form_phone: "Telefone",
     contact_form_message: "Como podemos ajudar?",
     contact_form_submit: "Enviar Mensagem",
-    contact_form_note: "Este formulário ainda não está conectado a um serviço de envio — enquanto isso, escreva para jt@jtmann.com.",
+    contact_form_error: "Algo deu errado. Tente novamente ou escreva diretamente para jt@jtmann.com.",
     contact_phone_label: "Telefone / WhatsApp",
     contact_phone_value: "+1 (508) 904-4002",
     contact_email_label: "E-mail",
@@ -140,7 +140,7 @@ const TRANSLATIONS = {
   },
 
   en: {
-    meta_title: "Federal Immigration Attorney | Law Office of Jonathan T. Mann",
+    meta_title: "Mann Immigration Law | Law Office of Jonathan T. Mann",
     meta_description: "The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on the Brazilian community.",
 
     nav_home: "Home",
@@ -214,7 +214,7 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Brazilian Legal Consultant",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo is a Brazilian-licensed attorney (OAB/RJ) and founding partner of his own law firm in Rio de Janeiro, practicing Tax Law, International Tax Law, and Immigration Law. He holds a Doctorate and Master's in Legal Sciences from Universidade Autónoma de Lisboa, with a certificate in U.S. Federal Taxation and International Transactions from the University of Illinois Urbana-Champaign. As the Brazilian legal consultant to the Law Office of Jonathan T. Mann, he supports immigration cases for clients of every background, with added depth in tax and cross-border matters affecting Brazilian clients.",
+    consultant1_bio: "Leopoldo is a Brazilian-licensed attorney (OAB/RJ) and founding partner of his own Rio de Janeiro law firm, practicing Tax, International Tax, and Immigration Law, holding a doctorate in Legal Sciences from Universidade Autónoma de Lisboa. As the Brazilian legal consultant to the Law Office of Jonathan T. Mann, he supports immigration cases for clients of every background, with added depth in cross-border tax matters.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Brazilian Legal Consultant",
@@ -257,7 +257,7 @@ const TRANSLATIONS = {
     contact_form_phone: "Phone",
     contact_form_message: "How can we help?",
     contact_form_submit: "Send Message",
-    contact_form_note: "This form isn't connected to an email service yet — in the meantime, please write to jt@jtmann.com.",
+    contact_form_error: "Something went wrong. Please try again or email jt@jtmann.com directly.",
     contact_phone_label: "Phone / WhatsApp",
     contact_phone_value: "+1 (508) 904-4002",
     contact_email_label: "Email",
@@ -278,7 +278,7 @@ const TRANSLATIONS = {
   },
 
   es: {
-    meta_title: "Abogado de Inmigración Federal | Law Office of Jonathan T. Mann",
+    meta_title: "Mann Immigration Law | Law Office of Jonathan T. Mann",
     meta_description: "Law Office of Jonathan T. Mann ayuda a familias inmigrantes en todo Estados Unidos con visas, green card y ciudadanía estadounidense — consultas virtuales en inglés, español y portugués, con un enfoque en la comunidad brasileña.",
 
     nav_home: "Inicio",
@@ -352,7 +352,7 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Legal Brasileño",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo es abogado con licencia en Brasil (OAB/RJ) y socio fundador de su propio despacho en Río de Janeiro, con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio. Tiene Doctorado y Maestría en Ciencias Jurídicas por la Universidade Autónoma de Lisboa, con una certificación en U.S. Federal Taxation and International Transactions por la University of Illinois Urbana-Champaign. Como consultor legal brasileño del Law Office of Jonathan T. Mann, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios y transfronterizos que afectan a clientes brasileños.",
+    consultant1_bio: "Leopoldo es abogado con licencia en Brasil (OAB/RJ) y socio fundador de su propio despacho en Río de Janeiro, con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio, con doctorado en Ciencias Jurídicas por la Universidade Autónoma de Lisboa. Como consultor legal brasileño del Law Office of Jonathan T. Mann, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios transfronterizos.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Legal Brasileña",
@@ -395,7 +395,7 @@ const TRANSLATIONS = {
     contact_form_phone: "Teléfono",
     contact_form_message: "¿Cómo podemos ayudarle?",
     contact_form_submit: "Enviar Mensaje",
-    contact_form_note: "Este formulario aún no está conectado a un servicio de correo — mientras tanto, escriba a jt@jtmann.com.",
+    contact_form_error: "Algo salió mal. Intente de nuevo o escriba directamente a jt@jtmann.com.",
     contact_phone_label: "Teléfono / WhatsApp",
     contact_phone_value: "+1 (508) 904-4002",
     contact_email_label: "Correo electrónico",

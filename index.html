@@ -3,8 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta_title">Federal Immigration Attorney | Law Office of Jonathan T. Mann</title>
+  <title data-i18n="meta_title">Mann Immigration Law | Law Office of Jonathan T. Mann</title>
   <meta name="description" data-i18n="meta_description" content="The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on the Brazilian community." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+
+  <!-- Social share preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mann Immigration Law" />
+  <!-- og:title/description intentionally static (English) — social crawlers don't run JS,
+       so this stays fixed regardless of the visitor's in-page language selection. -->
+  <meta property="og:title" content="Mann Immigration Law | Law Office of Jonathan T. Mann" />
+  <meta property="og:description" content="The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on the Brazilian community." />
+  <meta property="og:image" content="https://jtmann.com/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://jtmann.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mann Immigration Law | Law Office of Jonathan T. Mann" />
+  <meta name="twitter:description" content="The Law Office of Jonathan T. Mann helps immigrant families across the United States with visas, green cards, and U.S. citizenship — virtual consultations in English, Spanish, and Portuguese, with a focus on the Brazilian community." />
+  <meta name="twitter:image" content="https://jtmann.com/assets/img/og-image.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,7 +40,9 @@
   <!-- ===== Header ===== -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#home" class="wordmark">JT Mann <span>Immigration Law</span></a>
+      <a href="#home" class="wordmark">
+        <img src="assets/img/logo-mark.png" alt="Jonathan T. Mann Immigration Law" class="logo-img" />
+      </a>
 
       <nav class="main-nav" id="main-nav" aria-label="Main navigation">
         <ul>
@@ -406,7 +430,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/mjykrolq" method="POST" novalidate>
           <div class="form-group">
             <label for="name" data-i18n="contact_form_name">Full name</label>
             <input type="text" id="name" name="name" required autocomplete="name" />
@@ -423,9 +447,11 @@
             <label for="message" data-i18n="contact_form_message">How can we help?</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
+          <input type="hidden" name="_subject" value="New inquiry from jtmann.com website" />
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" class="btn btn-primary btn-lg btn-block" data-i18n="contact_form_submit">Send Message</button>
-          <p class="placeholder-note" data-i18n="contact_form_note">This form isn't connected to an email service yet — in the meantime, please write to jt@jtmann.com.</p>
           <p class="form-success" id="form-success" role="status" data-i18n="contact_success" hidden>Thank you! Your message has been sent. We'll be in touch soon.</p>
+          <p class="form-error" id="form-error" role="alert" data-i18n="contact_form_error" hidden>Something went wrong. Please try again or email jt@jtmann.com directly.</p>
         </form>
       </div>
     </section>
@@ -436,7 +462,9 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <a href="#home" class="wordmark footer-wordmark">JT Mann <span>Immigration Law</span></a>
+        <a href="#home" class="wordmark footer-wordmark">
+          <img src="assets/img/logo-mark.png" alt="Jonathan T. Mann Immigration Law" class="logo-img" />
+        </a>
         <p class="footer-formal-name">Law Office of Jonathan T. Mann</p>
         <p data-i18n="footer_tagline">Federal Immigration Law — Service in English, Spanish, and Portuguese</p>
       </div>

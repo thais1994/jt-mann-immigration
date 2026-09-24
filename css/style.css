@@ -89,13 +89,11 @@ textarea:focus-visible {
   gap: 16px;
 }
 .wordmark {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.35rem;
-  color: var(--navy-900);
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
 }
-.wordmark span { color: var(--blue-600); font-weight: 500; }
+.logo-img { height: 42px; width: auto; display: block; }
 
 .main-nav ul { display: flex; gap: 28px; }
 .main-nav a {
@@ -602,6 +600,15 @@ textarea:focus-visible {
   font-size: .9rem;
   font-weight: 600;
 }
+.form-error {
+  margin-top: 14px;
+  background: #fdecec;
+  color: #b42318;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: .9rem;
+  font-weight: 600;
+}
 
 /* ===== Footer ===== */
 .site-footer {
@@ -616,8 +623,13 @@ textarea:focus-visible {
   padding-bottom: 36px;
   border-bottom: 1px solid rgba(255,255,255,.12);
 }
-.footer-wordmark { color: var(--white); }
-.footer-wordmark span { color: #8fb8ec; }
+.footer-wordmark {
+  display: inline-flex;
+  background: var(--white);
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+.footer-wordmark .logo-img { height: 36px; }
 .footer-formal-name { color: #dbe4f0; font-size: .92rem; font-weight: 600; margin-top: 10px; margin-bottom: 0; }
 .footer-brand p { color: #9fb0cc; font-size: .88rem; margin-top: 6px; }
 .footer-col h4 { color: var(--white); font-size: .92rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 14px; }
@@ -694,13 +706,13 @@ textarea:focus-visible {
   .mobile-toggle { display: flex; }
 
   .header-inner { gap: 8px; }
-  .wordmark { font-size: 1.05rem; }
+  .logo-img { height: 36px; }
   .lang-dropdown-mobile .lang-dropdown-toggle { padding: 7px 8px; font-size: .74rem; }
   .lang-dropdown-mobile .lang-dropdown-list { left: auto; right: 0; }
 }
 
 @media (max-width: 400px) {
-  .wordmark span { display: none; }
+  .logo-img { height: 32px; }
 }
 
 /* Reduced motion */

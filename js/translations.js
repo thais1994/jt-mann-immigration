@@ -76,11 +76,11 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Jurídico Brasileiro",
     consultant1_location: "Orlando, Flórida",
-    consultant1_bio: "Leopoldo é advogado licenciado pela Ordem dos Advogados do Brasil (OAB/RJ) e sócio fundador de seu próprio escritório no Rio de Janeiro, com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório, com doutorado em Ciências Jurídicas pela Universidade Autónoma de Lisboa. Como consultor jurídico brasileiro da JT Mann Immigration Law PLLC, ele apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias transfronteiriças.",
+    consultant1_bio: "Leopoldo André Canal Almeida é advogado no Brasil, sócio e fundador do escritório de advocacia CANAL ADVOGADOS, detém vasta experiência jurídica com foco em Direito Tributário, Empresarial e Imigratório, tendo realizado sua formação jurídica nas melhores escolas jurídicas do Brasil e do exterior. Como consultor jurídico brasileiro da JT Mann Immigration Law PLLC, ele apoia o escritório em casos de imigração para clientes de todas as origens.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Jurídica Brasileira",
-    consultant2_bio: "Sylvia é advogada licenciada pela Ordem dos Advogados do Brasil (OAB/RJ), com atuação em Direito Tributário, Direito Tributário Internacional e Direito Imigratório, e experiência em escritórios de advocacia e na Procuradoria Regional da República no Rio de Janeiro. Como consultora jurídica brasileira da JT Mann Immigration Law PLLC, apoia o escritório em casos de imigração para clientes de todas as origens, com profundidade adicional em questões tributárias e transfronteiriças que afetam clientes brasileiros.",
+    consultant2_bio: "Sylvia Thevenard é advogada brasileira do escritório CANAL ADVOGADOS, tendo cursado intercâmbio de Law School nos Estados Unidos na Universidade de Wisconsin-Madison, e detém grande especialização em Direito Tributário, Empresarial e Imigratório. Como consultora jurídica brasileira da JT Mann Immigration Law PLLC, ela apoia o escritório em casos de imigração para clientes de todas as origens.",
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Consultora Jurídica Brasileira",
@@ -214,11 +214,11 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Brazilian Legal Consultant",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo is a Brazilian-licensed attorney (OAB/RJ) and founding partner of his own Rio de Janeiro law firm, practicing Tax, International Tax, and Immigration Law, holding a doctorate in Legal Sciences from Universidade Autónoma de Lisboa. As the Brazilian legal consultant to JT Mann Immigration Law PLLC, he supports immigration cases for clients of every background, with added depth in cross-border tax matters.",
+    consultant1_bio: "Leopoldo André Canal Almeida is a Brazilian-licensed attorney and founding partner of the Brazilian law firm CANAL ADVOGADOS, with extensive legal experience focused on Tax, Corporate, and Immigration Law, having completed his legal education at leading law schools in Brazil and abroad. As the Brazilian legal consultant to JT Mann Immigration Law PLLC, he supports immigration cases for clients of every background.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Brazilian Legal Consultant",
-    consultant2_bio: "Sylvia is a Brazilian-licensed attorney (OAB/RJ) practicing Tax Law, International Tax Law, and Immigration Law, with experience at law firms and the Federal Prosecutor's Office in Rio de Janeiro. As a Brazilian legal consultant to JT Mann Immigration Law PLLC, she supports immigration cases for clients of every background, with added depth in tax and cross-border matters affecting Brazilian clients.",
+    consultant2_bio: "Sylvia Thevenard is a Brazilian-licensed attorney with the law firm CANAL ADVOGADOS, having completed a law school exchange program in the United States at the University of Wisconsin–Madison, and holds significant expertise in Tax, Corporate, and Immigration Law. As a Brazilian legal consultant to JT Mann Immigration Law PLLC, she supports immigration cases for clients of every background.",
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Brazilian Legal Consultant",
@@ -352,11 +352,11 @@ const TRANSLATIONS = {
     consultant1_name: "Leopoldo André Canal Almeida",
     consultant1_title: "Consultor Legal Brasileño",
     consultant1_location: "Orlando, Florida",
-    consultant1_bio: "Leopoldo es abogado con licencia en Brasil (OAB/RJ) y socio fundador de su propio despacho en Río de Janeiro, con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio, con doctorado en Ciencias Jurídicas por la Universidade Autónoma de Lisboa. Como consultor legal brasileño de JT Mann Immigration Law PLLC, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios transfronterizos.",
+    consultant1_bio: "Leopoldo André Canal Almeida es abogado en Brasil, socio y fundador del despacho de abogados CANAL ADVOGADOS, cuenta con amplia experiencia jurídica enfocada en Derecho Tributario, Empresarial e Migratorio, habiendo realizado su formación jurídica en las mejores escuelas de derecho de Brasil y del extranjero. Como consultor legal brasileño de JT Mann Immigration Law PLLC, apoya al despacho en casos de inmigración para clientes de todos los orígenes.",
 
     consultant2_name: "Sylvia Thevenard",
     consultant2_title: "Consultora Legal Brasileña",
-    consultant2_bio: "Sylvia es abogada con licencia en Brasil (OAB/RJ), con práctica en Derecho Tributario, Derecho Tributario Internacional y Derecho Migratorio, con experiencia en despachos de abogados y en la Procuraduría Regional de la República en Río de Janeiro. Como consultora legal brasileña de JT Mann Immigration Law PLLC, apoya al despacho en casos de inmigración para clientes de todos los orígenes, con especial profundidad en asuntos tributarios y transfronterizos que afectan a clientes brasileños.",
+    consultant2_bio: "Sylvia Thevenard es abogada brasileña del despacho CANAL ADVOGADOS, habiendo cursado un intercambio de Law School en los Estados Unidos en la Universidad de Wisconsin-Madison, y cuenta con gran especialización en Derecho Tributario, Empresarial e Migratorio. Como consultora legal brasileña de JT Mann Immigration Law PLLC, apoya al despacho en casos de inmigración para clientes de todos los orígenes.",
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Consultora Legal Brasileña",

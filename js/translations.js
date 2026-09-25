@@ -84,7 +84,7 @@ const TRANSLATIONS = {
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Consultora Jurídica Brasileira",
-    consultant3_bio: "Thaís Rodrigues é advogada licenciada no Brasil e apoia a prática de imigração do escritório, ajudando clientes de todas as origens com suas questões de imigração para os Estados Unidos, com profundidade adicional em casos brasileiros e latino-americanos. Trabalhando ao lado do Jonathan, ela auxilia em pesquisa jurídica, preparação de casos e revisão de documentos em processos de imigração baseados em família e emprego, garantindo que os clientes possam se comunicar com conforto em português, inglês ou espanhol.",
+    consultant3_bio: "Thaís Rodrigues é advogada licenciada no Brasil, com atuação focada em Direito Tributário, Empresarial e Imigratório. Como consultora jurídica brasileira da JT Mann Immigration Law PLLC, ela apoia o escritório em casos de imigração para clientes de todas as origens.",
 
     consultant_disclaimer: "Leopoldo, Sylvia e Thaís são advogados licenciados no Brasil — não nos Estados Unidos — e não exercem advocacia americana. Neste escritório, eles atuam como consultores jurídicos em casos de imigração para clientes de todas as origens.",
 
@@ -222,7 +222,7 @@ const TRANSLATIONS = {
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Brazilian Legal Consultant",
-    consultant3_bio: "Thaís Rodrigues is a Brazilian-licensed attorney who supports the firm's immigration practice, helping clients of every background with their U.S. immigration matters, with added depth in Brazilian and Latin American cases. Working alongside Jonathan, she assists with legal research, case preparation, and document review across family-based and employment-based immigration matters, ensuring clients can communicate comfortably in Portuguese, English, or Spanish.",
+    consultant3_bio: "Thaís Rodrigues is a Brazilian-licensed attorney with a practice focused on Tax, Corporate, and Immigration Law. As a Brazilian legal consultant to JT Mann Immigration Law PLLC, she supports immigration cases for clients of every background.",
 
     consultant_disclaimer: "Leopoldo, Sylvia, and Thaís are licensed attorneys in Brazil — not in the United States — and do not practice U.S. law. At this firm, they work as legal consultants across immigration matters for clients of every background.",
 
@@ -360,7 +360,7 @@ const TRANSLATIONS = {
 
     consultant3_name: "Thaís Rodrigues",
     consultant3_title: "Consultora Legal Brasileña",
-    consultant3_bio: "Thaís Rodrigues es abogada con licencia en Brasil y apoya la práctica de inmigración del despacho, ayudando a clientes de todos los orígenes con sus asuntos migratorios hacia los Estados Unidos, con especial profundidad en casos brasileños y latinoamericanos. Trabajando junto a Jonathan, colabora en investigación legal, preparación de casos y revisión de documentos en procesos migratorios basados en familia y empleo, garantizando que los clientes puedan comunicarse cómodamente en portugués, inglés o español.",
+    consultant3_bio: "Thaís Rodrigues es abogada con licencia en Brasil, con una práctica enfocada en Derecho Tributario, Empresarial e Migratorio. Como consultora legal brasileña de JT Mann Immigration Law PLLC, apoya al despacho en casos de inmigración para clientes de todos los orígenes.",
 
     consultant_disclaimer: "Leopoldo, Sylvia y Thaís son abogados con licencia en Brasil — no en los Estados Unidos — y no ejercen la abogacía estadounidense. En este despacho, actúan como consultores legales en casos de inmigración para clientes de todos los orígenes.",
 

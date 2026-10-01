@@ -199,10 +199,13 @@
       var submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) submitBtn.disabled = true;
 
+      var payload = {};
+      new FormData(form).forEach(function (value, key) { payload[key] = value; });
+
       fetch(form.action, {
         method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       })
         .then(function (response) {
           if (response.ok) {

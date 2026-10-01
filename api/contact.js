@@ -29,7 +29,7 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ ok: false, error: 'not_configured' });
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || 'jt@mannimmigrationlaw.com';
+  const to = process.env.CONTACT_TO_EMAIL || 'mannimmigrationlaw@gmail.com';
   const from = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev';
 
   const html =

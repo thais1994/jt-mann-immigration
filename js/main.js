@@ -50,6 +50,9 @@
 
     updateWhatsAppLinks(lang);
 
+    var brPhone = document.getElementById('footer-phone-br');
+    if (brPhone) brPhone.hidden = lang !== 'pt';
+
     ['lang-dropdown-current', 'lang-dropdown-current-mobile'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.textContent = LANG_SHORT_LABEL[lang] || lang.toUpperCase();

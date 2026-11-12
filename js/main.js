@@ -8,7 +8,7 @@
   // WhatsApp number to route to per language (digits only, country code included, no + / spaces / dashes)
   var WHATSAPP_NUMBERS = {
     en: '14077613901',   // +1 (407) 761-3901
-    pt: '16892801006',   // +1 (689) 280-1006
+    pt: '5562982876771', // +55 62 98287-6771
     es: '5562981359159', // +55 62 98135-9159
   };
 

@@ -50,8 +50,8 @@
 
     updateWhatsAppLinks(lang);
 
-    document.querySelectorAll('.pt-only').forEach(function (el) {
-      el.hidden = lang !== 'pt';
+    document.querySelectorAll('[data-langs]').forEach(function (el) {
+      el.hidden = el.getAttribute('data-langs').split(' ').indexOf(lang) === -1;
     });
 
     ['lang-dropdown-current', 'lang-dropdown-current-mobile'].forEach(function (id) {

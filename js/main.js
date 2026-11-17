@@ -49,6 +49,7 @@
     if (metaDesc) metaDesc.setAttribute('content', dict.meta_description);
 
     updateWhatsAppLinks(lang);
+    syncConsultLang(lang);
 
     document.querySelectorAll('[data-langs]').forEach(function (el) {
       el.hidden = el.getAttribute('data-langs').split(' ').indexOf(lang) === -1;
@@ -227,6 +228,116 @@
           if (submitBtn) submitBtn.disabled = false;
         });
     });
+  }
+
+
+  // ---- Free consultation wizard (questionnaire -> email to the office -> booking calendar) ----
+  var cForm = document.getElementById('consult-form');
+  var prefLangTouched = false;
+  var PREF_LANG_VALUES = { en: 'English', pt: 'Portuguese', es: 'Spanish' };
+
+  function syncConsultLang(lang) {
+    if (!cForm || prefLangTouched) return;
+    var r = cForm.querySelector('input[name="language"][value="' + PREF_LANG_VALUES[lang] + '"]');
+    if (r) r.checked = true;
+  }
+
+  if (cForm) {
+    var cSteps = cForm.querySelectorAll('.consult-step');
+    var cDots = document.querySelectorAll('#consult-progress li');
+    var cBack = document.getElementById('consult-back');
+    var cNext = document.getElementById('consult-next');
+    var cSubmit = document.getElementById('consult-submit');
+    var cError = document.getElementById('consult-error');
+    var cBooking = document.getElementById('consult-booking');
+    var cCurrent = 0;
+
+    var scrollToCard = function () {
+      var top = document.getElementById('consultation').getBoundingClientRect().top + window.scrollY - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    };
+
+    var showStep = function (i, scroll) {
+      cCurrent = i;
+      cSteps.forEach(function (s, idx) { s.hidden = idx !== i; });
+      cDots.forEach(function (d, idx) {
+        d.classList.toggle('active', idx === i);
+        d.classList.toggle('done', idx < i);
+      });
+      cBack.hidden = i === 0;
+      cNext.hidden = i === cSteps.length - 1;
+      cSubmit.hidden = i !== cSteps.length - 1;
+      if (scroll) scrollToCard();
+    };
+
+    var updateConditionals = function () {
+      cForm.querySelectorAll('[data-show-when]').forEach(function (el) {
+        var parts = el.getAttribute('data-show-when').split(':');
+        var checked = cForm.querySelector('input[name="' + parts[0] + '"]:checked');
+        el.hidden = !(checked && checked.value === parts[1]);
+      });
+      var unknown = document.getElementById('cf-status-unknown');
+      var endDate = document.getElementById('cf-status-end');
+      if (unknown && endDate) {
+        endDate.disabled = unknown.checked;
+        if (unknown.checked) endDate.value = '';
+      }
+    };
+
+    var stepIsValid = function () {
+      var fields = cSteps[cCurrent].querySelectorAll('input, textarea');
+      for (var i = 0; i < fields.length; i++) {
+        if (!fields[i].checkValidity()) {
+          fields[i].reportValidity();
+          return false;
+        }
+      }
+      return true;
+    };
+
+    cForm.addEventListener('change', updateConditionals);
+    cForm.querySelectorAll('input[name="language"]').forEach(function (r) {
+      r.addEventListener('click', function () { prefLangTouched = true; });
+    });
+    cNext.addEventListener('click', function () { if (stepIsValid()) showStep(cCurrent + 1, true); });
+    cBack.addEventListener('click', function () { showStep(cCurrent - 1, true); });
+
+    cForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!stepIsValid()) return;
+      cError.hidden = true;
+      cSubmit.disabled = true;
+
+      var payload = {};
+      new FormData(cForm).forEach(function (value, key) {
+        payload[key] = payload[key] !== undefined ? payload[key] + ', ' + value : value;
+      });
+      payload.site_lang = currentLang;
+
+      fetch(cForm.action, {
+        method: 'POST',
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      })
+        .then(function (response) {
+          if (!response.ok) { cError.hidden = false; return; }
+          cForm.hidden = true;
+          cDots.forEach(function (d, idx) {
+            d.classList.toggle('active', idx === cDots.length - 1);
+            d.classList.toggle('done', idx < cDots.length - 1);
+          });
+          var frame = cBooking.querySelector('iframe');
+          if (frame && frame.getAttribute('src') === 'about:blank') frame.src = frame.getAttribute('data-src');
+          cBooking.hidden = false;
+          scrollToCard();
+        })
+        .catch(function () { cError.hidden = false; })
+        .finally(function () { cSubmit.disabled = false; });
+    });
+
+    showStep(0, false);
+    updateConditionals();
+    syncConsultLang(currentLang);
   }
 
   // ---- WhatsApp links — routed to a different number per language, see updateWhatsAppLinks() ----

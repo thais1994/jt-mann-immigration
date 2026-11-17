@@ -113,6 +113,7 @@ const TRANSLATIONS = {
     faq_7_a: "Atendemos regularmente as áreas listadas neste site. Para alguns tipos de caso mais especializados, avaliamos sua situação e, quando apropriado, indicamos um advogado de confiança mais adequado para ajudar — para que você nunca fique sem direção.",
 
     contact_eyebrow: "Contato",
+    contact_title: "Entre em contato",
     contact_subtitle: "Consultas virtuais — atendendo clientes ao redor do mundo.",
     contact_form_name: "Nome completo",
     contact_form_email: "E-mail",
@@ -318,6 +319,7 @@ const TRANSLATIONS = {
     faq_7_a: "We regularly handle the areas listed on this site. For certain more specialized case types, we review your situation and, when appropriate, connect you with a trusted attorney best suited to help — so you're never left without direction.",
 
     contact_eyebrow: "Contact",
+    contact_title: "Get in touch",
     contact_subtitle: "Virtual consultations — serving clients around the world.",
     contact_form_name: "Full name",
     contact_form_email: "Email",
@@ -523,6 +525,7 @@ const TRANSLATIONS = {
     faq_7_a: "Atendemos regularmente las áreas indicadas en este sitio. Para ciertos casos más especializados, evaluamos su situación y, cuando es apropiado, lo conectamos con un abogado de confianza mejor preparado para ayudar — para que usted nunca se quede sin dirección.",
 
     contact_eyebrow: "Contacto",
+    contact_title: "Póngase en contacto",
     contact_subtitle: "Consultas virtuales — atendiendo a clientes alrededor del mundo.",
     contact_form_name: "Nombre completo",
     contact_form_email: "Correo electrónico",

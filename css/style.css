@@ -903,3 +903,5 @@ textarea:focus-visible {
 @media (min-width: 760px) {
   .contact-cards { grid-template-columns: repeat(3, 1fr); }
 }
+
+.footer-address { font-style: normal; font-size: .82rem; color: #9fb0cb; margin: 4px 0 0; line-height: 1.5; }

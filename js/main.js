@@ -189,47 +189,6 @@
     });
   });
 
-  // ---- Contact form (submits to Formspree via fetch, keeps the user on-page) ----
-  var form = document.getElementById('contact-form');
-  var successMsg = document.getElementById('form-success');
-  var errorMsg = document.getElementById('form-error');
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      if (errorMsg) errorMsg.hidden = true;
-      var submitBtn = form.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
-
-      var payload = {};
-      new FormData(form).forEach(function (value, key) { payload[key] = value; });
-
-      fetch(form.action, {
-        method: 'POST',
-        body: JSON.stringify(payload),
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      })
-        .then(function (response) {
-          if (response.ok) {
-            successMsg.hidden = false;
-            form.reset();
-            successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          } else {
-            if (errorMsg) errorMsg.hidden = false;
-          }
-        })
-        .catch(function () {
-          if (errorMsg) errorMsg.hidden = false;
-        })
-        .finally(function () {
-          if (submitBtn) submitBtn.disabled = false;
-        });
-    });
-  }
-
 
   // ---- Free consultation wizard (questionnaire -> email to the office -> booking calendar) ----
   var cForm = document.getElementById('consult-form');

@@ -870,3 +870,5 @@ textarea:focus-visible {
   .form-row { grid-template-columns: 1fr 1fr; }
   .choices:not(.inline) { grid-template-columns: 1fr 1fr; }
 }
+
+.contact-single { max-width: 640px; }

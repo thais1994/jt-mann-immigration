@@ -127,6 +127,8 @@ const TRANSLATIONS = {
     contact_email_value: "info@mannimmigrationlaw.com",
     contact_calendar_title: "Agendar Online",
     contact_calendar_placeholder: "Calendário de agendamento em breve",
+    contact_calendar_intro: "Agende online a sua consulta inicial gratuita.",
+    contact_calendar_button: "Agendar consulta gratuita",
     contact_success: "Obrigado! Sua mensagem foi enviada. Entraremos em contato em breve.",
 
     footer_tagline: "Direito de Imigração Federal — Atendimento em Inglês, Espanhol e Português",
@@ -266,6 +268,8 @@ const TRANSLATIONS = {
     contact_email_value: "info@mannimmigrationlaw.com",
     contact_calendar_title: "Book Online",
     contact_calendar_placeholder: "Online scheduling calendar coming soon",
+    contact_calendar_intro: "Schedule your free initial consultation online.",
+    contact_calendar_button: "Book your free consultation",
     contact_success: "Thank you! Your message has been sent. We'll be in touch soon.",
 
     footer_tagline: "Federal Immigration Law — Service in English, Spanish, and Portuguese",
@@ -405,6 +409,8 @@ const TRANSLATIONS = {
     contact_email_value: "info@mannimmigrationlaw.com",
     contact_calendar_title: "Agendar en Línea",
     contact_calendar_placeholder: "Calendario de citas en línea próximamente",
+    contact_calendar_intro: "Agende en línea su consulta inicial gratuita.",
+    contact_calendar_button: "Agendar consulta gratuita",
     contact_success: "¡Gracias! Su mensaje ha sido enviado. Nos pondremos en contacto pronto.",
 
     footer_tagline: "Derecho de Inmigración Federal — Atención en Inglés, Español y Portugués",

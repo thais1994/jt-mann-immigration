@@ -190,8 +190,9 @@
   });
 
 
-  // ---- Free consultation wizard (questionnaire -> email to the office -> booking calendar) ----
+  // ---- Free consultation: quick form -> booking calendar -> optional details ----
   var cForm = document.getElementById('consult-form');
+  var mForm = document.getElementById('consult-more-form');
   var prefLangTouched = false;
   var PREF_LANG_VALUES = { en: 'English', pt: 'Portuguese', es: 'Spanish' };
 
@@ -202,38 +203,35 @@
   }
 
   if (cForm) {
-    var cSteps = cForm.querySelectorAll('.consult-step');
     var cDots = document.querySelectorAll('#consult-progress li');
-    var cBack = document.getElementById('consult-back');
-    var cNext = document.getElementById('consult-next');
     var cSubmit = document.getElementById('consult-submit');
     var cError = document.getElementById('consult-error');
     var cBooking = document.getElementById('consult-booking');
-    var cCurrent = 0;
+    var mOpen = document.getElementById('consult-more-open');
+    var mSubmit = document.getElementById('consult-more-submit');
+    var mError = document.getElementById('consult-more-error');
+    var mDone = document.getElementById('consult-more-done');
 
-    var scrollToCard = function () {
-      var top = document.getElementById('consultation').getBoundingClientRect().top + window.scrollY - 90;
+    var scrollToEl = function (el) {
+      var top = el.getBoundingClientRect().top + window.scrollY - 100;
       window.scrollTo({ top: top, behavior: 'smooth' });
     };
 
-    var showStep = function (i, scroll) {
-      cCurrent = i;
-      cSteps.forEach(function (s, idx) { s.hidden = idx !== i; });
+    var setDots = function (activeIdx, doneUpTo) {
       cDots.forEach(function (d, idx) {
-        d.classList.toggle('active', idx === i);
-        d.classList.toggle('done', idx < i);
+        d.classList.toggle('active', idx === activeIdx);
+        d.classList.toggle('done', idx <= doneUpTo);
       });
-      cBack.hidden = i === 0;
-      cNext.hidden = i === cSteps.length - 1;
-      cSubmit.hidden = i !== cSteps.length - 1;
-      if (scroll) scrollToCard();
     };
 
     var updateConditionals = function () {
-      cForm.querySelectorAll('[data-show-when]').forEach(function (el) {
-        var parts = el.getAttribute('data-show-when').split(':');
-        var checked = cForm.querySelector('input[name="' + parts[0] + '"]:checked');
-        el.hidden = !(checked && checked.value === parts[1]);
+      [cForm, mForm].forEach(function (f) {
+        if (!f) return;
+        f.querySelectorAll('[data-show-when]').forEach(function (el) {
+          var parts = el.getAttribute('data-show-when').split(':');
+          var field = f.elements[parts[0]];
+          el.hidden = !(field && field.value === parts[1]);
+        });
       });
       var unknown = document.getElementById('cf-status-unknown');
       var endDate = document.getElementById('cf-status-end');
@@ -243,58 +241,84 @@
       }
     };
 
-    var stepIsValid = function () {
-      var fields = cSteps[cCurrent].querySelectorAll('input, textarea');
-      for (var i = 0; i < fields.length; i++) {
-        if (!fields[i].checkValidity()) {
-          fields[i].reportValidity();
-          return false;
-        }
-      }
-      return true;
-    };
-
-    cForm.addEventListener('change', updateConditionals);
-    cForm.querySelectorAll('input[name="language"]').forEach(function (r) {
-      r.addEventListener('click', function () { prefLangTouched = true; });
-    });
-    cNext.addEventListener('click', function () { if (stepIsValid()) showStep(cCurrent + 1, true); });
-    cBack.addEventListener('click', function () { showStep(cCurrent - 1, true); });
-
-    cForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!stepIsValid()) return;
-      cError.hidden = true;
-      cSubmit.disabled = true;
-
+    var formPayload = function (f, stage) {
       var payload = {};
-      new FormData(cForm).forEach(function (value, key) {
+      new FormData(f).forEach(function (value, key) {
         payload[key] = payload[key] !== undefined ? payload[key] + ', ' + value : value;
       });
+      payload.stage = stage;
       payload.site_lang = currentLang;
+      return payload;
+    };
 
-      fetch(cForm.action, {
+    var postJSON = function (payload) {
+      return fetch('/api/intake', {
         method: 'POST',
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      })
+      });
+    };
+
+    cForm.addEventListener('change', updateConditionals);
+    if (mForm) mForm.addEventListener('change', updateConditionals);
+    cForm.querySelectorAll('input[name="language"]').forEach(function (r) {
+      r.addEventListener('click', function () { prefLangTouched = true; });
+    });
+
+    // Quick form
+    cForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!cForm.checkValidity()) { cForm.reportValidity(); return; }
+      cError.hidden = true;
+      cSubmit.disabled = true;
+      var payload = formPayload(cForm, 'quick');
+
+      postJSON(payload)
         .then(function (response) {
           if (!response.ok) { cError.hidden = false; return; }
+          if (mForm) {
+            mForm.elements['name'].value = payload.name || '';
+            mForm.elements['email'].value = payload.email || '';
+          }
           cForm.hidden = true;
-          cDots.forEach(function (d, idx) {
-            d.classList.toggle('active', idx === cDots.length - 1);
-            d.classList.toggle('done', idx < cDots.length - 1);
-          });
+          setDots(1, 0);
           var frame = cBooking.querySelector('iframe');
           if (frame && frame.getAttribute('src') === 'about:blank') frame.src = frame.getAttribute('data-src');
           cBooking.hidden = false;
-          scrollToCard();
+          scrollToEl(document.querySelector('.consult-card'));
         })
         .catch(function () { cError.hidden = false; })
         .finally(function () { cSubmit.disabled = false; });
     });
 
-    showStep(0, false);
+    // Optional details
+    if (mOpen && mForm) {
+      mOpen.addEventListener('click', function () {
+        mForm.hidden = false;
+        mOpen.hidden = true;
+        setDots(2, 1);
+        scrollToEl(mForm);
+      });
+
+      mForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        mError.hidden = true;
+        mSubmit.disabled = true;
+
+        postJSON(formPayload(mForm, 'details'))
+          .then(function (response) {
+            if (!response.ok) { mError.hidden = false; return; }
+            mForm.hidden = true;
+            mDone.hidden = false;
+            setDots(-1, 2);
+            scrollToEl(mDone);
+          })
+          .catch(function () { mError.hidden = false; })
+          .finally(function () { mSubmit.disabled = false; });
+      });
+    }
+
+    setDots(0, -1);
     updateConditionals();
     syncConsultLang(currentLang);
   }

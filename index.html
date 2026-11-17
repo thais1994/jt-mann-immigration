@@ -401,212 +401,204 @@
       </div>
     </section>
 
-    <!-- ===== Free consultation: questionnaire, then booking ===== -->
+    <!-- ===== Free consultation: quick form, then booking, then optional details ===== -->
     <section class="section section-alt" id="consultation">
       <div class="container consult">
         <p class="eyebrow center" data-i18n="consult_eyebrow">Free Initial Consultation</p>
-        <h2 class="section-title center" data-i18n="consult_title">Tell us about your case</h2>
-        <p class="section-subtitle center" data-i18n="consult_subtitle">This short form takes about 5–7 minutes and helps us prepare for your free consultation. It isn't an application, and "I'm not sure" is always okay. When you finish, you'll choose a day and time.</p>
+        <h2 class="section-title center" data-i18n="consult_title">Book your free consultation</h2>
+        <p class="section-subtitle center" data-i18n="consult_subtitle">Tell us a little about you, then pick a day and time that works for you. It takes about a minute.</p>
 
         <div class="consult-card">
           <ol class="consult-progress" id="consult-progress">
-            <li class="active"><span class="dot">1</span><span class="lbl" data-i18n="cf_p1">Contact</span></li>
-            <li><span class="dot">2</span><span class="lbl" data-i18n="cf_p2">Goal</span></li>
-            <li><span class="dot">3</span><span class="lbl" data-i18n="cf_p3">Situation</span></li>
-            <li><span class="dot">4</span><span class="lbl" data-i18n="cf_p4">Your story</span></li>
-            <li><span class="dot">5</span><span class="lbl" data-i18n="cf_p5">Book a time</span></li>
+            <li class="active"><span class="dot">1</span><span class="lbl" data-i18n="cf_p1">Your details</span></li>
+            <li><span class="dot">2</span><span class="lbl" data-i18n="cf_p2">Book a time</span></li>
+            <li><span class="dot">3</span><span class="lbl" data-i18n="cf_p3">Help us prepare</span></li>
           </ol>
 
+          <!-- Quick form -->
           <form id="consult-form" action="/api/intake" method="POST" novalidate>
-
-            <!-- Step 1 -->
-            <fieldset class="consult-step">
-              <h3 data-i18n="cf_s1_title">Your contact details</h3>
+            <div class="form-group">
+              <label for="cf-name" data-i18n="cf_name">Full legal name</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-row">
               <div class="form-group">
-                <label for="cf-name" data-i18n="cf_name">Full legal name</label>
-                <input type="text" id="cf-name" name="name" required autocomplete="name" />
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="cf-email" data-i18n="cf_email">Email address</label>
-                  <input type="email" id="cf-email" name="email" required autocomplete="email" />
-                </div>
-                <div class="form-group">
-                  <label for="cf-phone" data-i18n="cf_phone">Phone / WhatsApp (include country code)</label>
-                  <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="cf-country" data-i18n="cf_country">Which country are you in right now?</label>
-                  <input type="text" id="cf-country" name="country" required autocomplete="country-name" />
-                </div>
-                <div class="form-group">
-                  <label for="cf-state" data-i18n="cf_state">If you are in the U.S., which state?</label>
-                  <input type="text" id="cf-state" name="us_state" autocomplete="address-level1" />
-                </div>
+                <label for="cf-email" data-i18n="cf_email">Email address</label>
+                <input type="email" id="cf-email" name="email" required autocomplete="email" />
               </div>
               <div class="form-group">
-                <span class="q-label" data-i18n="cf_lang">Preferred language</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="radio" name="language" value="English" /><span data-i18n="cf_lang_en">English</span></label>
-                  <label class="choice"><input type="radio" name="language" value="Portuguese" /><span data-i18n="cf_lang_pt">Portuguese</span></label>
-                  <label class="choice"><input type="radio" name="language" value="Spanish" /><span data-i18n="cf_lang_es">Spanish</span></label>
-                  <label class="choice"><input type="radio" name="language" value="Other" /><span data-i18n="cf_other">Other</span></label>
-                </div>
+                <label for="cf-phone" data-i18n="cf_phone">Phone / WhatsApp (include country code)</label>
+                <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
               </div>
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_reach">Best way to reach you (select all that apply)</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="checkbox" name="reach" value="Email" /><span data-i18n="cf_reach_email">Email</span></label>
-                  <label class="choice"><input type="checkbox" name="reach" value="Phone call" /><span data-i18n="cf_reach_call">Phone call</span></label>
-                  <label class="choice"><input type="checkbox" name="reach" value="Text message" /><span data-i18n="cf_reach_text">Text message</span></label>
-                  <label class="choice"><input type="checkbox" name="reach" value="WhatsApp" /><span data-i18n="cf_reach_wa">WhatsApp</span></label>
-                </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-country" data-i18n="cf_country">Which country are you in right now?</label>
+              <input type="text" id="cf-country" name="country" required autocomplete="country-name" />
+            </div>
+            <div class="form-group">
+              <span class="q-label" data-i18n="cf_lang">Preferred language</span>
+              <div class="choices inline">
+                <label class="choice"><input type="radio" name="language" value="English" /><span data-i18n="cf_lang_en">English</span></label>
+                <label class="choice"><input type="radio" name="language" value="Portuguese" /><span data-i18n="cf_lang_pt">Portuguese</span></label>
+                <label class="choice"><input type="radio" name="language" value="Spanish" /><span data-i18n="cf_lang_es">Spanish</span></label>
+                <label class="choice"><input type="radio" name="language" value="Other" /><span data-i18n="cf_other">Other</span></label>
               </div>
-              <div class="form-group">
-                <label for="cf-times" data-i18n="cf_times">Best days or times to reach you, with your time zone (optional)</label>
-                <input type="text" id="cf-times" name="times" />
-              </div>
-            </fieldset>
-
-            <!-- Step 2 -->
-            <fieldset class="consult-step" hidden>
-              <h3 data-i18n="cf_s2_title">Your main goal</h3>
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_goal">What is the main thing you hope to do?</span>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="goal" value="Live in the U.S. permanently (green card)" required /><span data-i18n="cf_goal_1">Live in the U.S. permanently (green card)</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Live, work, or study in the U.S. for a limited time (visa)" /><span data-i18n="cf_goal_2">Live, work, or study in the U.S. for a limited time (visa)</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Extend or change my current status in the U.S." /><span data-i18n="cf_goal_3">Extend or change my current status in the U.S.</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Bring a family member to the U.S." /><span data-i18n="cf_goal_4">Bring a family member to the U.S.</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Become a U.S. citizen" /><span data-i18n="cf_goal_5">Become a U.S. citizen</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Get permission to work in the U.S." /><span data-i18n="cf_goal_6">Get permission to work in the U.S.</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Seek protection for safety reasons (asylum or humanitarian)" /><span data-i18n="cf_goal_7">Seek protection for safety reasons (asylum or humanitarian)</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Visit the U.S. (tourism or short business trip)" /><span data-i18n="cf_goal_8">Visit the U.S. (tourism or short business trip)</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Fix a problem with a past application or immigration case" /><span data-i18n="cf_goal_9">Fix a problem with a past application or immigration case</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="Other" /><span data-i18n="cf_other">Other</span></label>
-                  <label class="choice"><input type="radio" name="goal" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
-                </div>
-              </div>
-              <div class="form-group" data-show-when="goal:Other" hidden>
-                <label for="cf-goal-other" data-i18n="cf_goal_other">Please tell us briefly what you hope to do (optional)</label>
-                <input type="text" id="cf-goal-other" name="goal_other" />
-              </div>
-            </fieldset>
-
-            <!-- Step 3 -->
-            <fieldset class="consult-step" hidden>
-              <h3 data-i18n="cf_s3_title">Your situation</h3>
-
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_status">What is your current immigration status, if any?</span>
-                <div class="choices">
-                  <label class="choice"><input type="radio" name="status" value="Outside the U.S., no U.S. immigration status" required /><span data-i18n="cf_status_1">I am outside the U.S. and have no U.S. immigration status</span></label>
-                  <label class="choice"><input type="radio" name="status" value="Visa holder (tourist, student, work visa, etc.)" /><span data-i18n="cf_status_2">Visa holder (tourist, student, work visa, etc.)</span></label>
-                  <label class="choice"><input type="radio" name="status" value="Lawful permanent resident (green card holder)" /><span data-i18n="cf_status_3">Lawful permanent resident (green card holder)</span></label>
-                  <label class="choice"><input type="radio" name="status" value="Application or request pending" /><span data-i18n="cf_status_4">I have an application or request pending</span></label>
-                  <label class="choice"><input type="radio" name="status" value="Other status or permission to stay" /><span data-i18n="cf_status_5">Other status or permission to stay</span></label>
-                  <label class="choice"><input type="radio" name="status" value="No current status" /><span data-i18n="cf_status_6">I have no current status</span></label>
-                  <label class="choice"><input type="radio" name="status" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="cf-status-end" data-i18n="cf_status_end">If you know it, when does your current status or permission to stay end? (optional)</label>
-                <div class="date-row">
-                  <input type="date" id="cf-status-end" name="status_end" />
-                  <label class="choice small"><input type="checkbox" name="status_end_unknown" value="Yes" id="cf-status-unknown" /><span data-i18n="cf_dontknow">I don't know</span></label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_connect">Which of these connect you to your goal? (select all that apply, optional)</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="checkbox" name="connections" value="Family member in the U.S." /><span data-i18n="cf_connect_1">A family member in the U.S.</span></label>
-                  <label class="choice"><input type="checkbox" name="connections" value="U.S. employer or job offer" /><span data-i18n="cf_connect_2">A U.S. employer or job offer</span></label>
-                  <label class="choice"><input type="checkbox" name="connections" value="School or university" /><span data-i18n="cf_connect_3">A school or university</span></label>
-                  <label class="choice"><input type="checkbox" name="connections" value="Investment or business" /><span data-i18n="cf_connect_4">An investment or business</span></label>
-                  <label class="choice"><input type="checkbox" name="connections" value="Safety or humanitarian concern" /><span data-i18n="cf_connect_5">A safety or humanitarian concern</span></label>
-                  <label class="choice"><input type="checkbox" name="connections" value="None of these" /><span data-i18n="cf_connect_6">None of these</span></label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="cf-connection-detail" data-i18n="cf_connect_detail">Tell us a little about this connection, such as how you are related to the family member, or the name of the employer or school (optional)</label>
-                <textarea id="cf-connection-detail" name="connection_detail" rows="2"></textarea>
-              </div>
-
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_prior">Have you ever filed an immigration application or petition, or been part of an immigration case, in any country?</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="radio" name="prior" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
-                  <label class="choice"><input type="radio" name="prior" value="No" /><span data-i18n="cf_no">No</span></label>
-                  <label class="choice"><input type="radio" name="prior" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
-                </div>
-              </div>
-              <div class="form-group" data-show-when="prior:Yes" hidden>
-                <label for="cf-prior-detail" data-i18n="cf_prior_detail">What was filed or what happened? An approximate date and the outcome help (optional)</label>
-                <textarea id="cf-prior-detail" name="prior_detail" rows="2"></textarea>
-              </div>
-
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_problem">Have you ever had an immigration problem, such as a denial, an overstay, being refused entry, or removal proceedings?</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="radio" name="problem" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
-                  <label class="choice"><input type="radio" name="problem" value="No" /><span data-i18n="cf_no">No</span></label>
-                  <label class="choice"><input type="radio" name="problem" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
-                  <label class="choice"><input type="radio" name="problem" value="Prefers to discuss at the consultation" /><span data-i18n="cf_discuss">I'd rather discuss this at the consultation</span></label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <span class="q-label" data-i18n="cf_date_q">Do you have an important date coming up? For example, your status ending, a court date, or a job or school start date.</span>
-                <div class="choices inline">
-                  <label class="choice"><input type="radio" name="has_date" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
-                  <label class="choice"><input type="radio" name="has_date" value="No" /><span data-i18n="cf_no">No</span></label>
-                  <label class="choice"><input type="radio" name="has_date" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
-                </div>
-              </div>
-              <div class="form-row" data-show-when="has_date:Yes" hidden>
-                <div class="form-group">
-                  <label for="cf-date-when" data-i18n="cf_date_when">Date (approximate is fine)</label>
-                  <input type="date" id="cf-date-when" name="date_when" />
-                </div>
-                <div class="form-group">
-                  <label for="cf-date-for" data-i18n="cf_date_for">What is it for?</label>
-                  <input type="text" id="cf-date-for" name="date_for" />
-                </div>
-              </div>
-            </fieldset>
-
-            <!-- Step 4 -->
-            <fieldset class="consult-step" hidden>
-              <h3 data-i18n="cf_s4_title">In your own words</h3>
-              <div class="form-group">
-                <label for="cf-story" data-i18n="cf_story">Tell us about your situation and what you hope will happen. Share only what you're comfortable sharing, and please don't include ID numbers (optional).</label>
-                <textarea id="cf-story" name="story" rows="7"></textarea>
-              </div>
-              <label class="choice consent"><input type="checkbox" name="consent" value="Yes" required /><span data-i18n="cf_consent">I understand this form is for information only, is not legal advice, and does not create an attorney-client relationship.</span></label>
-              <p class="consult-note" data-i18n="cf_urgent">If something is time-sensitive, such as a date coming up soon, please also call or message us. Our contact details are below.</p>
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-            </fieldset>
+            </div>
+            <div class="form-group">
+              <label for="cf-goal" data-i18n="cf_goal">What is the main thing you hope to do?</label>
+              <select id="cf-goal" name="goal" required>
+                <option value="" data-i18n="cf_choose">Choose one…</option>
+                <option value="Live in the U.S. permanently (green card)" data-i18n="cf_goal_1">Live in the U.S. permanently (green card)</option>
+                <option value="Live, work, or study in the U.S. for a limited time (visa)" data-i18n="cf_goal_2">Live, work, or study in the U.S. for a limited time (visa)</option>
+                <option value="Extend or change my current status in the U.S." data-i18n="cf_goal_3">Extend or change my current status in the U.S.</option>
+                <option value="Bring a family member to the U.S." data-i18n="cf_goal_4">Bring a family member to the U.S.</option>
+                <option value="Become a U.S. citizen" data-i18n="cf_goal_5">Become a U.S. citizen</option>
+                <option value="Get permission to work in the U.S." data-i18n="cf_goal_6">Get permission to work in the U.S.</option>
+                <option value="Seek protection for safety reasons (asylum or humanitarian)" data-i18n="cf_goal_7">Seek protection for safety reasons (asylum or humanitarian)</option>
+                <option value="Visit the U.S. (tourism or short business trip)" data-i18n="cf_goal_8">Visit the U.S. (tourism or short business trip)</option>
+                <option value="Fix a problem with a past application or immigration case" data-i18n="cf_goal_9">Fix a problem with a past application or immigration case</option>
+                <option value="Other" data-i18n="cf_other">Other</option>
+                <option value="I'm not sure" data-i18n="cf_unsure">I'm not sure</option>
+              </select>
+            </div>
+            <div class="form-group" data-show-when="goal:Other" hidden>
+              <label for="cf-goal-other" data-i18n="cf_goal_other">Please tell us briefly what you hope to do (optional)</label>
+              <input type="text" id="cf-goal-other" name="goal_other" />
+            </div>
+            <label class="choice consent"><input type="checkbox" name="consent" value="Yes" required /><span data-i18n="cf_consent">I understand this form is for information only, is not legal advice, and does not create an attorney-client relationship.</span></label>
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
             <p class="form-error" id="consult-error" role="alert" data-i18n="contact_form_error" hidden>Something went wrong. Please try again or email info@mannimmigrationlaw.com directly.</p>
-
             <div class="consult-nav">
-              <button type="button" class="btn btn-outline" id="consult-back" data-i18n="cf_back" hidden>Back</button>
-              <button type="button" class="btn btn-primary" id="consult-next" data-i18n="cf_next">Next</button>
-              <button type="submit" class="btn btn-primary" id="consult-submit" data-i18n="cf_submit" hidden>Send and choose a time</button>
+              <button type="submit" class="btn btn-primary btn-lg" id="consult-submit" data-i18n="cf_submit">Continue to booking</button>
             </div>
           </form>
 
-          <!-- Shown after the form is sent -->
+          <!-- Shown after the quick form is sent -->
           <div class="consult-booking" id="consult-booking" hidden>
-            <h3 data-i18n="cf_done_title">Thank you, we received your answers</h3>
+            <h3 data-i18n="cf_done_title">Thank you, we received your details</h3>
             <p data-i18n="cf_done_text">Now choose a day and time for your free consultation.</p>
             <p class="consult-note" data-i18n="cf_book_hint">Please use the same email address you entered in the form.</p>
             <iframe class="calendar-frame" src="about:blank" data-src="https://bookings.cloud.microsoft/book/MannImmigrationLaw1@mannimmigrationlaw.com/" title="Online scheduling"></iframe>
             <a class="btn btn-outline btn-block" href="https://bookings.cloud.microsoft/book/MannImmigrationLaw1@mannimmigrationlaw.com/" target="_blank" rel="noopener" data-i18n="cf_book_fallback">Calendar not showing? Open it in a new tab</a>
+
+            <!-- Optional details -->
+            <div class="consult-more">
+              <h3 data-i18n="cf_more_title">Help us prepare (optional)</h3>
+              <p data-i18n="cf_more_text">Answer a few more questions so we can make the most of your call. It takes about 3 minutes, and you can skip it.</p>
+              <button type="button" class="btn btn-outline" id="consult-more-open" data-i18n="cf_more_button">Answer a few more questions</button>
+
+              <form id="consult-more-form" action="/api/intake" method="POST" novalidate hidden>
+                <input type="hidden" name="name" />
+                <input type="hidden" name="email" />
+
+                <div class="form-group">
+                  <label for="cf-state" data-i18n="cf_state">If you are in the U.S., which state?</label>
+                  <input type="text" id="cf-state" name="us_state" autocomplete="address-level1" />
+                </div>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_reach">Best way to reach you (select all that apply)</span>
+                  <div class="choices inline">
+                    <label class="choice"><input type="checkbox" name="reach" value="Email" /><span data-i18n="cf_reach_email">Email</span></label>
+                    <label class="choice"><input type="checkbox" name="reach" value="Phone call" /><span data-i18n="cf_reach_call">Phone call</span></label>
+                    <label class="choice"><input type="checkbox" name="reach" value="Text message" /><span data-i18n="cf_reach_text">Text message</span></label>
+                    <label class="choice"><input type="checkbox" name="reach" value="WhatsApp" /><span data-i18n="cf_reach_wa">WhatsApp</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cf-times" data-i18n="cf_times">Best days or times to reach you, with your time zone (optional)</label>
+                  <input type="text" id="cf-times" name="times" />
+                </div>
+
+                <h4 class="consult-subhead" data-i18n="cf_s3_title">Your situation</h4>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_status">What is your current immigration status, if any?</span>
+                  <div class="choices">
+                    <label class="choice"><input type="radio" name="status" value="Outside the U.S., no U.S. immigration status" /><span data-i18n="cf_status_1">I am outside the U.S. and have no U.S. immigration status</span></label>
+                    <label class="choice"><input type="radio" name="status" value="Visa holder (tourist, student, work visa, etc.)" /><span data-i18n="cf_status_2">Visa holder (tourist, student, work visa, etc.)</span></label>
+                    <label class="choice"><input type="radio" name="status" value="Lawful permanent resident (green card holder)" /><span data-i18n="cf_status_3">Lawful permanent resident (green card holder)</span></label>
+                    <label class="choice"><input type="radio" name="status" value="Application or request pending" /><span data-i18n="cf_status_4">I have an application or request pending</span></label>
+                    <label class="choice"><input type="radio" name="status" value="Other status or permission to stay" /><span data-i18n="cf_status_5">Other status or permission to stay</span></label>
+                    <label class="choice"><input type="radio" name="status" value="No current status" /><span data-i18n="cf_status_6">I have no current status</span></label>
+                    <label class="choice"><input type="radio" name="status" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cf-status-end" data-i18n="cf_status_end">If you know it, when does your current status or permission to stay end? (optional)</label>
+                  <div class="date-row">
+                    <input type="date" id="cf-status-end" name="status_end" />
+                    <label class="choice small"><input type="checkbox" name="status_end_unknown" value="Yes" id="cf-status-unknown" /><span data-i18n="cf_dontknow">I don't know</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_connect">Which of these connect you to your goal? (select all that apply, optional)</span>
+                  <div class="choices inline">
+                    <label class="choice"><input type="checkbox" name="connections" value="Family member in the U.S." /><span data-i18n="cf_connect_1">A family member in the U.S.</span></label>
+                    <label class="choice"><input type="checkbox" name="connections" value="U.S. employer or job offer" /><span data-i18n="cf_connect_2">A U.S. employer or job offer</span></label>
+                    <label class="choice"><input type="checkbox" name="connections" value="School or university" /><span data-i18n="cf_connect_3">A school or university</span></label>
+                    <label class="choice"><input type="checkbox" name="connections" value="Investment or business" /><span data-i18n="cf_connect_4">An investment or business</span></label>
+                    <label class="choice"><input type="checkbox" name="connections" value="Safety or humanitarian concern" /><span data-i18n="cf_connect_5">A safety or humanitarian concern</span></label>
+                    <label class="choice"><input type="checkbox" name="connections" value="None of these" /><span data-i18n="cf_connect_6">None of these</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="cf-connection-detail" data-i18n="cf_connect_detail">Tell us a little about this connection, such as how you are related to the family member, or the name of the employer or school (optional)</label>
+                  <textarea id="cf-connection-detail" name="connection_detail" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_prior">Have you ever filed an immigration application or petition, or been part of an immigration case, in any country?</span>
+                  <div class="choices inline">
+                    <label class="choice"><input type="radio" name="prior" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
+                    <label class="choice"><input type="radio" name="prior" value="No" /><span data-i18n="cf_no">No</span></label>
+                    <label class="choice"><input type="radio" name="prior" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
+                  </div>
+                </div>
+                <div class="form-group" data-show-when="prior:Yes" hidden>
+                  <label for="cf-prior-detail" data-i18n="cf_prior_detail">What was filed or what happened? An approximate date and the outcome help (optional)</label>
+                  <textarea id="cf-prior-detail" name="prior_detail" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_problem">Have you ever had an immigration problem, such as a denial, an overstay, being refused entry, or removal proceedings?</span>
+                  <div class="choices inline">
+                    <label class="choice"><input type="radio" name="problem" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
+                    <label class="choice"><input type="radio" name="problem" value="No" /><span data-i18n="cf_no">No</span></label>
+                    <label class="choice"><input type="radio" name="problem" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
+                    <label class="choice"><input type="radio" name="problem" value="Prefers to discuss at the consultation" /><span data-i18n="cf_discuss">I'd rather discuss this at the consultation</span></label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <span class="q-label" data-i18n="cf_date_q">Do you have an important date coming up? For example, your status ending, a court date, or a job or school start date.</span>
+                  <div class="choices inline">
+                    <label class="choice"><input type="radio" name="has_date" value="Yes" /><span data-i18n="cf_yes">Yes</span></label>
+                    <label class="choice"><input type="radio" name="has_date" value="No" /><span data-i18n="cf_no">No</span></label>
+                    <label class="choice"><input type="radio" name="has_date" value="I'm not sure" /><span data-i18n="cf_unsure">I'm not sure</span></label>
+                  </div>
+                </div>
+                <div class="form-row" data-show-when="has_date:Yes" hidden>
+                  <div class="form-group">
+                    <label for="cf-date-when" data-i18n="cf_date_when">Date (approximate is fine)</label>
+                    <input type="date" id="cf-date-when" name="date_when" />
+                  </div>
+                  <div class="form-group">
+                    <label for="cf-date-for" data-i18n="cf_date_for">What is it for?</label>
+                    <input type="text" id="cf-date-for" name="date_for" />
+                  </div>
+                </div>
+
+                <h4 class="consult-subhead" data-i18n="cf_s4_title">In your own words</h4>
+                <div class="form-group">
+                  <label for="cf-story" data-i18n="cf_story">Tell us about your situation and what you hope will happen. Share only what you're comfortable sharing, and please don't include ID numbers (optional).</label>
+                  <textarea id="cf-story" name="story" rows="6"></textarea>
+                </div>
+                <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+                <p class="form-error" id="consult-more-error" role="alert" data-i18n="contact_form_error" hidden>Something went wrong. Please try again or email info@mannimmigrationlaw.com directly.</p>
+                <div class="consult-nav">
+                  <button type="submit" class="btn btn-primary" id="consult-more-submit" data-i18n="cf_more_submit">Send details</button>
+                </div>
+              </form>
+              <p class="form-success" id="consult-more-done" role="status" data-i18n="cf_more_done" hidden>Thank you! We received your details and will review them before your call.</p>
+            </div>
           </div>
         </div>
       </div>

@@ -905,3 +905,25 @@ textarea:focus-visible {
 }
 
 .footer-address { font-style: normal; font-size: .82rem; color: #9fb0cb; margin: 4px 0 0; line-height: 1.5; }
+
+/* quick form + optional details */
+.form-group select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: .96rem;
+  color: var(--ink-900);
+  background: var(--white);
+}
+.form-group select:focus { border-color: var(--blue-600); }
+.consult-more {
+  margin-top: 32px;
+  padding-top: 26px;
+  border-top: 1px solid var(--border);
+}
+.consult-more h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.consult-more #consult-more-form { margin-top: 22px; }
+.consult-subhead { font-size: 1.05rem; margin: 28px 0 14px; padding-top: 18px; border-top: 1px solid var(--border); }
+.consult-nav [hidden] { display: none; }

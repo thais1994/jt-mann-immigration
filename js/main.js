@@ -325,6 +325,80 @@
 
   // ---- WhatsApp links — routed to a different number per language, see updateWhatsAppLinks() ----
 
+  // ---- Cookie consent + Google Analytics (GA4 loads only after the visitor accepts) ----
+  var GA_ID = 'G-NKLTNRKVYV';
+  var CONSENT_KEY = 'mann_cookie_consent';
+  var cookieBanner = document.getElementById('cookie-banner');
+  var gaLoaded = false;
+
+  function readConsent() {
+    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+  }
+  function saveConsent(value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+  }
+
+  function loadAnalytics() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+    window['ga-disable-' + GA_ID] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+
+  function removeAnalyticsCookies() {
+    var host = location.hostname;
+    var domains = [host, '.' + host, '.' + host.replace(/^www\./, '')];
+    document.cookie.split(';').forEach(function (c) {
+      var name = c.split('=')[0].trim();
+      if (name === '_ga' || name.indexOf('_ga_') === 0 || name === '_gid') {
+        domains.forEach(function (d) {
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+        });
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+      }
+    });
+  }
+
+  function showCookieBanner() { if (cookieBanner) cookieBanner.hidden = false; }
+  function hideCookieBanner() { if (cookieBanner) cookieBanner.hidden = true; }
+
+  function chooseConsent(value) {
+    saveConsent(value);
+    hideCookieBanner();
+    if (value === 'granted') {
+      loadAnalytics();
+    } else {
+      window['ga-disable-' + GA_ID] = true;
+      removeAnalyticsCookies();
+    }
+  }
+
+  var storedConsent = readConsent();
+  if (storedConsent === 'granted') {
+    loadAnalytics();
+  } else if (storedConsent !== 'denied') {
+    showCookieBanner();
+  }
+
+  var cookieAccept = document.getElementById('cookie-accept');
+  var cookieDecline = document.getElementById('cookie-decline');
+  var cookieSettings = document.getElementById('cookie-settings');
+  if (cookieAccept) cookieAccept.addEventListener('click', function () { chooseConsent('granted'); });
+  if (cookieDecline) cookieDecline.addEventListener('click', function () { chooseConsent('denied'); });
+  if (cookieSettings) {
+    cookieSettings.addEventListener('click', function (e) {
+      e.preventDefault();
+      showCookieBanner();
+    });
+  }
+
   // ---- Footer year ----
   var yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

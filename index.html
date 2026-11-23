@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) - Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NKLTNRKVYV"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-NKLTNRKVYV');
-  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title data-i18n="meta_title">Mann Immigration Law PLLC</title>
@@ -657,9 +649,18 @@
     <div class="container footer-legal">
       <p data-i18n="footer_ad_disclaimer">Attorney Advertising. Prior results do not guarantee a similar outcome.</p>
       <p data-i18n="footer_relationship_disclaimer">The content on this website is provided for informational purposes only and does not constitute legal advice. Submitting information through this website does not create an attorney-client relationship.</p>
-      <p class="footer-copyright">&copy; <span id="footer-year"></span> Mann Immigration Law PLLC. <span data-i18n="footer_rights">All rights reserved.</span></p>
+      <p class="footer-copyright">&copy; <span id="footer-year"></span> Mann Immigration Law PLLC. <span data-i18n="footer_rights">All rights reserved.</span> &middot; <a href="#" id="cookie-settings" data-i18n="cookie_settings">Cookie settings</a></p>
     </div>
   </footer>
+
+  <!-- Cookie banner: Google Analytics loads only after the visitor accepts (see js/main.js) -->
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-labelledby="cookie-banner-text" hidden>
+    <p id="cookie-banner-text" data-i18n="cookie_text">We use cookies to understand how visitors use our website and to improve it. You can accept or decline analytics cookies.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-outline" id="cookie-decline" data-i18n="cookie_decline">Decline</button>
+      <button type="button" class="btn btn-primary" id="cookie-accept" data-i18n="cookie_accept">Accept</button>
+    </div>
+  </div>
 
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>

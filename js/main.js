@@ -44,9 +44,10 @@
       }
     });
 
-    document.title = dict.meta_title;
+    var titleKey = document.body.getAttribute('data-title-key');
+    document.title = dict[titleKey || 'meta_title'];
     var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute('content', dict.meta_description);
+    if (metaDesc && !titleKey) metaDesc.setAttribute('content', dict.meta_description);
 
     updateWhatsAppLinks(lang);
     syncConsultLang(lang);
